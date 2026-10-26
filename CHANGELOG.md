@@ -1,3 +1,10 @@
+## Version 1.4 — October 26, 2026
+- Added standalone singles Smile Bigger (August 22, 2026; QT6HR2604313) and You'll Have Me (September 29, 2026; QTA2U2647621).
+- Added two complete song pages, original cover artwork, official lyric PDF sources and transcriptions, static SEO and JSON-LD, verified UPC identifiers, release chronology, lyrics navigation, and sitemap.
+- Kept The Forecast at 15 tracks and preserved all 18 existing songs unchanged.
+- Added neutral unpublished story/commentary states rather than the unapproved narratives.
+- Expanded audit coverage to 20 songs and five standalone singles.
+
 # Changelog
 
 ## Version 1.3 — Content readiness and pre-launch QA

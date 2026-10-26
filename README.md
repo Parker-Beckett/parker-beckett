@@ -139,3 +139,7 @@ Edit the project copy, preview locally, run `python3 audit_site.py`, create a fr
 - Approved commentary or confirmation of existing topic notes.
 - Additional confirmed production, performance, engineering, publishing, or recording credits.
 - Official lyric-sheet files intended for public download.
+
+
+## Catalog expansion (Version 1.4)
+Two additional standalone recordings are cataloged in `site-config.js`: Smile Bigger and You'll Have Me. Their original lyric PDFs are retained under `assets/documents/` and linked from the song pages. The album track list remains unchanged at 15. Only verified streaming and video URLs should be populated. Story and commentary entries require Corey's explicit approval before publication.

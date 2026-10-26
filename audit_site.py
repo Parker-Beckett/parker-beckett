@@ -24,10 +24,12 @@ expected={
 'seattle':('Seattle','QT3F72610094','album_track','2026-06-26'),
 'bad-idea-tourettes':("Bad Idea Tourette's",'QT3FA2635455','standalone_single','2026-06-07'),
 'run-it-straight':('Run It Straight','QT6EF2616658','standalone_single','2026-06-28'),
-'already-in':('Already In','QT6F62657669','standalone_single','2026-07-14')}
+'already-in':('Already In','QT6F62657669','standalone_single','2026-07-14'),
+'smile-bigger':('Smile Bigger','QT6HR2604313','standalone_single','2026-08-22'),
+'youll-have-me':("You'll Have Me",'QTA2U2647621','standalone_single','2026-09-29')}
 album=['aware','looks-fine-to-me','dead-end','merrily','no-return','after-all','movies','bubblegum-tuesday','sorry','on-air','what-have-i-done','blue-light','normal','i-was-the-island','seattle']
 pre={'merrily','looks-fine-to-me','no-return','aware'}
-standalone={'bad-idea-tourettes','run-it-straight','already-in'}
+standalone={'bad-idea-tourettes','run-it-straight','already-in','smile-bigger','youll-have-me'}
 internal_docs={'README.md','CHANGELOG.md','AUDIT_REPORT.md','CONTENT_STATUS.md','audit_site.py'}
 platforms={'spotify','appleMusic','amazonMusic','youtubeMusic','pandora','deezer','tidal'}
 
@@ -39,9 +41,9 @@ if not m:
 else:
     try: config=json.loads(m.group(1))
     except Exception as exc: errors.append(f'site-config.js: invalid JSON object: {exc}'); config={}
-if config.get('version')!='1.3': errors.append('site-config.js: version is not 1.3')
+if config.get('version')!='1.4': errors.append('site-config.js: version is not 1.4')
 songs=config.get('songs',{})
-if set(songs)!=set(expected): errors.append(f'site-config.js: expected 18 songs, found {len(songs)}')
+if set(songs)!=set(expected): errors.append(f'site-config.js: expected 20 songs, found {len(songs)}')
 isrcs=[]
 for slug,(title,isrc,rtype,date) in expected.items():
     item=songs.get(slug,{})
@@ -150,6 +152,15 @@ for slug,(title,isrc,rtype,date) in expected.items():
     if frame and frame.get('src'): errors.append(f'{slug}: static iframe src should come only from site-config.js')
     if len(soup.select('.song-next'))!=1 or len(soup.select('.song-next a'))<1: errors.append(f'{slug}: related songs missing')
 
+# New-source PDF checks: keep official source documents available and unchanged.
+for slug in ('smile-bigger','youll-have-me'):
+    item=songs[slug]
+    src=root/item['lyricSheetPath']
+    if not src.is_file(): errors.append(f'{slug}: original official lyric PDF missing')
+    page=BeautifulSoup((root/'songs'/f'{slug}.html').read_text(encoding='utf-8'),'html.parser')
+    if not page.select_one(f'a[href="../{item["lyricSheetPath"]}"]'): errors.append(f'{slug}: official lyric source link missing')
+    if not page.select_one('.detail-card[data-content-status="story-placeholder"]'): errors.append(f'{slug}: unapproved story must remain placeholder')
+
 # Blue Light exact preservation markers and false missing claims.
 blue_soup=BeautifulSoup((root/'songs/blue-light.html').read_text(encoding='utf-8'),'html.parser')
 blue=blue_soup.select_one('.lyrics-text').get_text('\n',strip=True)
@@ -168,8 +179,8 @@ for slug in standalone:
 if len(forecast.select('.release-note'))!=15: errors.append('the-forecast.html: release labels not present for all 15 tracks')
 music=BeautifulSoup((root/'music.html').read_text(encoding='utf-8'),'html.parser')
 chron=[a.get('href') for a in music.select('.chronology-row')]
-expected_chron=['songs/merrily.html','songs/bad-idea-tourettes.html','songs/looks-fine-to-me.html','songs/no-return.html','songs/aware.html','the-forecast.html','songs/run-it-straight.html','songs/already-in.html']
-if chron!=expected_chron: errors.append('music.html: eight-entry chronology mismatch')
+expected_chron=['songs/merrily.html','songs/bad-idea-tourettes.html','songs/looks-fine-to-me.html','songs/no-return.html','songs/aware.html','the-forecast.html','songs/run-it-straight.html','songs/already-in.html','songs/smile-bigger.html','songs/youll-have-me.html']
+if chron!=expected_chron: errors.append('music.html: ten-entry chronology mismatch')
 
 # Videos page uses central config and has no hardcoded external embed.
 video=BeautifulSoup((root/'videos.html').read_text(encoding='utf-8'),'html.parser')
@@ -198,7 +209,7 @@ for js in ['site-config.js','script.js','song-page.js','videos-page.js']:
     if result.returncode: errors.append(f'{js}: JavaScript syntax error ({result.stderr.strip()})')
 
 print(f'Audited {len(html_files)} HTML pages, {len(expected)} recordings, 4 JavaScript files, sitemap, robots, assets, and content states.')
-print('Verified 4 pre-album singles, 11 album-debut tracks, 3 standalone singles, and exactly 15 The Forecast tracks.')
+print('Verified 4 pre-album singles, 11 album-debut tracks, 5 standalone singles, and exactly 15 The Forecast tracks.')
 if warnings:
     print('\nWarnings:')
     for item in sorted(set(warnings)): print(' -',item)

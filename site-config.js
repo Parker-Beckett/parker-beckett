@@ -713,7 +713,81 @@ window.PARKER_BECKETT_CONFIG = {
       },
       "lyricSheetPath": "",
       "openGraphImage": "assets/images/already-in.jpg"
+    },
+    "smile-bigger": {
+      "title": "Smile Bigger",
+      "slug": "smile-bigger",
+      "isrc": "QT6HR2604313",
+      "upc": "701546301469",
+      "releaseType": "standalone_single",
+      "originalReleaseDate": "2026-08-22",
+      "originalReleaseDateDisplay": "August 22, 2026",
+      "albumName": null,
+      "albumReleaseDate": null,
+      "albumReleaseDateDisplay": null,
+      "preAlbumSingle": false,
+      "debutedOnAlbum": false,
+      "standaloneSingle": true,
+      "artworkPath": "assets/images/smile-bigger.png",
+      "songPagePath": "songs/smile-bigger.html",
+      "streaming": {
+        "spotify": "",
+        "appleMusic": "",
+        "amazonMusic": "",
+        "youtubeMusic": "",
+        "pandora": "",
+        "deezer": "",
+        "tidal": ""
+      },
+      "youtubeEmbedUrl": "",
+      "videoThumbnail": "",
+      "lyricsStatus": "complete",
+      "storyStatus": "placeholder",
+      "commentaryStatus": "placeholder",
+      "confirmedCredits": {
+        "musicAndLyrics": "Corey Winfield",
+        "label": "Soul Tech Records"
+      },
+      "lyricSheetPath": "assets/documents/smile-bigger-official-lyric-sheet.pdf",
+      "openGraphImage": "assets/images/smile-bigger.png"
+    },
+    "youll-have-me": {
+      "title": "You'll Have Me",
+      "slug": "youll-have-me",
+      "isrc": "QTA2U2647621",
+      "upc": "700573318921",
+      "releaseType": "standalone_single",
+      "originalReleaseDate": "2026-09-29",
+      "originalReleaseDateDisplay": "September 29, 2026",
+      "albumName": null,
+      "albumReleaseDate": null,
+      "albumReleaseDateDisplay": null,
+      "preAlbumSingle": false,
+      "debutedOnAlbum": false,
+      "standaloneSingle": true,
+      "artworkPath": "assets/images/youll-have-me.jpg",
+      "songPagePath": "songs/youll-have-me.html",
+      "streaming": {
+        "spotify": "",
+        "appleMusic": "",
+        "amazonMusic": "",
+        "youtubeMusic": "",
+        "pandora": "",
+        "deezer": "",
+        "tidal": ""
+      },
+      "youtubeEmbedUrl": "",
+      "videoThumbnail": "",
+      "lyricsStatus": "complete",
+      "storyStatus": "placeholder",
+      "commentaryStatus": "placeholder",
+      "confirmedCredits": {
+        "musicAndLyrics": "Corey Winfield",
+        "label": "Soul Tech Records"
+      },
+      "lyricSheetPath": "assets/documents/youll-have-me-official-lyric-sheet.pdf",
+      "openGraphImage": "assets/images/youll-have-me.jpg"
     }
   },
-  "version": "1.3"
+  "version": "1.4"
 };
