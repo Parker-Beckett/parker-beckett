@@ -339,3 +339,23 @@
 - Approved commentary or confirmation that the retained topic notes may be published.
 - Additional confirmed production, performance, engineering, publishing, or recording credits.
 - Official lyric-sheet files when Corey wants them downloadable from the public archive.
+
+
+## Version 1.4 additions — awaiting editorial approval
+
+### Smile Bigger
+- Release: standalone single, August 22, 2026; ISRC QT6HR2604313; UPC 701546301469.
+- Lyrics: complete; original PDF retained and publicly linked as official lyric sheet.
+- Artwork: original PNG preserved.
+- Story: not approved. Personal background notes are private and require approval before use.
+- Commentary: not approved. Credits: Music and Lyrics — Corey Winfield; Label — Soul Tech Records.
+- Streaming (Spotify, Apple Music, Amazon Music, YouTube Music, Pandora, Deezer, Tidal): missing verified per-song links.
+- Video embed/thumbnail: not supplied.
+
+### You'll Have Me
+- Release: standalone single, September 29, 2026; ISRC QTA2U2647621; UPC 700573318921.
+- Lyrics: complete; original PDF retained and publicly linked as official lyric sheet.
+- Artwork: original JPG preserved.
+- Story: not approved. Personal background notes are private and require approval before use. No story published.
+- Commentary: not approved. Credits: Music and Lyrics — Corey Winfield; Label — Soul Tech Records.
+- Streaming (all seven platforms): missing verified per-song links. Video embed/thumbnail: not supplied.
