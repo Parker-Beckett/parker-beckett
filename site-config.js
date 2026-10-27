@@ -769,7 +769,7 @@ window.PARKER_BECKETT_CONFIG = {
       "songPagePath": "songs/youll-have-me.html",
       "streaming": {
         "spotify": "",
-        "appleMusic": "",
+        "appleMusic": "https://music.apple.com/us/album/youll-have-me-single/6817603059",
         "amazonMusic": "",
         "youtubeMusic": "",
         "pandora": "",
