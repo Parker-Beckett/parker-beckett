@@ -767,11 +767,13 @@ window.PARKER_BECKETT_CONFIG = {
       "standaloneSingle": true,
       "artworkPath": "assets/images/youll-have-me.jpg",
       "songPagePath": "songs/youll-have-me.html",
+      "streamingLayout": "verified-only",
+      "hyperfollow": "https://distrokid.com/hyperfollow/parkerbeckett/youll-have-me",
       "streaming": {
-        "spotify": "",
-        "appleMusic": "",
-        "amazonMusic": "",
-        "youtubeMusic": "",
+        "spotify": "https://open.spotify.com/album/3maqP6vurWhaIeqmU659pl",
+        "appleMusic": "https://music.apple.com/us/album/youll-have-me-single/6817603059",
+        "amazonMusic": "https://www.amazon.com/gp/product/B0HLJN2CWB",
+        "youtubeMusic": "https://music.youtube.com/watch?v=rxZiiAN7D7k&si=LITemWvlTdJP_7pF",
         "pandora": "",
         "deezer": "",
         "tidal": ""

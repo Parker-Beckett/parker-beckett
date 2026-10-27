@@ -9,25 +9,35 @@
   const validEmbed = value => /^https:\/\/www\.youtube-nocookie\.com\/embed\/[A-Za-z0-9_-]+(?:\?[^#]*)?$/.test(value || '') && !/[?&]autoplay=1(?:&|$)/.test(value);
 
   const streamGrid = document.querySelector('[data-streaming-links]');
-  if (streamGrid) Object.entries(labels).forEach(([key, label]) => {
-    const url = (song.streaming?.[key] || '').trim();
-    const active = validHttps(url);
-    const el = document.createElement(active ? 'a' : 'span');
-    el.className = `stream-button${active ? '' : ' disabled'}`;
-    if (active) {
-      el.textContent = label;
-      el.href = url;
-      el.target = '_blank';
-      el.rel = 'noopener noreferrer';
-      el.setAttribute('aria-label', `Listen to ${song.title || 'this song'} on ${label} (opens in a new tab)`);
-    } else {
-      el.textContent = `${label} · Link Coming Soon`;
-      el.setAttribute('role', 'link');
-      el.setAttribute('aria-disabled', 'true');
-      el.setAttribute('title', `${label} link coming soon`);
-    }
-    streamGrid.appendChild(el);
-  });
+  const verifiedOnly = song.streamingLayout === 'verified-only';
+  if (streamGrid) {
+    if (verifiedOnly) streamGrid.classList.add('verified-only');
+    Object.entries(labels).forEach(([key, label]) => {
+      const url = (song.streaming?.[key] || '').trim();
+      const active = validHttps(url);
+      if (verifiedOnly && !active) return;
+      const el = document.createElement(active ? 'a' : 'span');
+      el.className = `stream-button${active ? '' : ' disabled'}`;
+      if (active) {
+        el.textContent = label;
+        el.href = url;
+        el.target = '_blank';
+        el.rel = 'noopener noreferrer';
+        el.setAttribute('aria-label', `Listen to ${song.title || 'this song'} on ${label} (opens in a new tab)`);
+      } else {
+        el.textContent = `${label} · Link Coming Soon`;
+        el.setAttribute('role', 'link');
+        el.setAttribute('aria-disabled', 'true');
+        el.setAttribute('title', `${label} link coming soon`);
+      }
+      streamGrid.appendChild(el);
+    });
+  }
+  const moreOptions = document.querySelector('[data-hyperfollow-link]');
+  if (moreOptions && validHttps(song.hyperfollow || '')) {
+    moreOptions.href = song.hyperfollow;
+    moreOptions.hidden = false;
+  }
 
   const videoFrame = document.querySelector('[data-video-frame]');
   const videoPlaceholder = document.querySelector('[data-video-placeholder]');
