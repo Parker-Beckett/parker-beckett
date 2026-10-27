@@ -61,7 +61,7 @@ window.PARKER_BECKETT_CONFIG = {
       "preAlbumSingle": true,
       "debutedOnAlbum": false,
       "standaloneSingle": false,
-      "artworkPath": "assets/images/forecast.jpeg",
+      "artworkPath": "assets/images/aware-cover.png",
       "songPagePath": "songs/aware.html",
       "streaming": {
         "spotify": "",
@@ -83,7 +83,7 @@ window.PARKER_BECKETT_CONFIG = {
         "label": "Soul Tech Records"
       },
       "lyricSheetPath": "",
-      "openGraphImage": "assets/images/forecast.jpeg"
+      "openGraphImage": "assets/images/aware-cover.png"
     },
     "looks-fine-to-me": {
       "title": "Looks Fine to Me",
@@ -505,7 +505,7 @@ window.PARKER_BECKETT_CONFIG = {
       "preAlbumSingle": false,
       "debutedOnAlbum": true,
       "standaloneSingle": false,
-      "artworkPath": "assets/images/gallery.jpeg",
+      "artworkPath": "assets/images/normal-cover.jpg",
       "songPagePath": "songs/normal.html",
       "streaming": {
         "spotify": "",
@@ -527,7 +527,7 @@ window.PARKER_BECKETT_CONFIG = {
         "label": "Soul Tech Records"
       },
       "lyricSheetPath": "",
-      "openGraphImage": "assets/images/gallery.jpeg"
+      "openGraphImage": "assets/images/normal-cover.jpg"
     },
     "i-was-the-island": {
       "title": "I Was the Island",
@@ -542,7 +542,7 @@ window.PARKER_BECKETT_CONFIG = {
       "preAlbumSingle": false,
       "debutedOnAlbum": true,
       "standaloneSingle": false,
-      "artworkPath": "assets/images/hero.jpeg",
+      "artworkPath": "assets/images/i-was-the-island-cover.png",
       "songPagePath": "songs/i-was-the-island.html",
       "streaming": {
         "spotify": "",
@@ -564,7 +564,7 @@ window.PARKER_BECKETT_CONFIG = {
         "label": "Soul Tech Records"
       },
       "lyricSheetPath": "",
-      "openGraphImage": "assets/images/hero.jpeg"
+      "openGraphImage": "assets/images/i-was-the-island-cover.png"
     },
     "seattle": {
       "title": "Seattle",
@@ -616,7 +616,7 @@ window.PARKER_BECKETT_CONFIG = {
       "preAlbumSingle": false,
       "debutedOnAlbum": false,
       "standaloneSingle": true,
-      "artworkPath": "assets/images/forecast.jpeg",
+      "artworkPath": "assets/images/bad-idea-tourettes-cover.png",
       "songPagePath": "songs/bad-idea-tourettes.html",
       "streaming": {
         "spotify": "",
@@ -638,7 +638,7 @@ window.PARKER_BECKETT_CONFIG = {
         "label": "Soul Tech Records"
       },
       "lyricSheetPath": "",
-      "openGraphImage": "assets/images/forecast.jpeg"
+      "openGraphImage": "assets/images/bad-idea-tourettes-cover.png"
     },
     "run-it-straight": {
       "title": "Run It Straight",
