@@ -63,3 +63,7 @@ img[width][height]{height:auto}
 .stream-more-wrap{margin:23px 0 0}.stream-more{font-size:.84rem;letter-spacing:.035em;color:var(--gold);text-decoration:underline;text-underline-offset:5px;text-decoration-color:rgba(198,170,114,.48)}.stream-more:hover{color:var(--paper);text-decoration-color:currentColor}
 @media(max-width:950px){.stream-grid.verified-only{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.stream-grid.verified-only{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stream-grid.verified-only .stream-button{min-height:60px;padding:12px 8px;font-size:.76rem}}
+
+/* Keep released video players visible when JavaScript hides the placeholders. */
+.video-placeholder[hidden],
+.video-shell iframe[hidden] { display: none !important; }
