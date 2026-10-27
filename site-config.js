@@ -320,7 +320,7 @@ window.PARKER_BECKETT_CONFIG = {
       "preAlbumSingle": false,
       "debutedOnAlbum": true,
       "standaloneSingle": false,
-      "artworkPath": "assets/images/forecast.jpeg",
+      "artworkPath": "assets/images/bubblegum-tuesday-cover.jpg",
       "songPagePath": "songs/bubblegum-tuesday.html",
       "streaming": {
         "spotify": "",
@@ -331,7 +331,7 @@ window.PARKER_BECKETT_CONFIG = {
         "deezer": "",
         "tidal": ""
       },
-      "youtubeEmbedUrl": "",
+      "youtubeEmbedUrl": "https://www.youtube-nocookie.com/embed/ZNEWqTu-4sA",
       "videoThumbnail": "",
       "lyricsStatus": "complete",
       "storyStatus": "placeholder",
@@ -342,7 +342,7 @@ window.PARKER_BECKETT_CONFIG = {
         "label": "Soul Tech Records"
       },
       "lyricSheetPath": "",
-      "openGraphImage": "assets/images/forecast.jpeg"
+      "openGraphImage": "assets/images/bubblegum-tuesday-cover.jpg"
     },
     "sorry": {
       "title": "Sorry",
