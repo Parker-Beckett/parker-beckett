@@ -78,3 +78,30 @@ img[width][height]{height:auto}
 .story-feature .story-prose p:last-child{margin-bottom:0}
 .story-feature .story-prose em{font-style:italic}
 @media(max-width:680px){.song-details:has(.story-feature){grid-template-columns:minmax(0,1fr)}.song-details .story-feature{grid-column:1;padding-top:24px}.story-feature .story-prose p{line-height:1.75}}
+
+
+/* Corey Winfield contact feature: portrait only on contact page */
+.contact-editorial{background:radial-gradient(ellipse at 85% 10%,rgba(38,56,59,.30),transparent 53%),linear-gradient(180deg,#0c1216 0%,#090d10 100%);color:var(--paper);padding:clamp(50px,6vw,96px) 6vw clamp(60px,8vw,120px)}
+.contact-intro{max-width:1200px;margin:0 auto clamp(32px,5vw,60px)}
+.contact-intro .eyebrow{color:var(--gold);margin:0 0 24px}
+.contact-intro h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(3rem,6.2vw,6.4rem);font-weight:400;letter-spacing:-.045em;line-height:1.05;margin:0}
+.contact-identity{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(32px,5vw,84px);align-items:center}
+.contact-portrait{margin:0;overflow:hidden;background:#181e22;border-radius:4px}
+.contact-portrait img{display:block;width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:62% center}
+.contact-profile{max-width:560px}
+.contact-person{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.45rem,4.2vw,4.5rem);line-height:1.05;letter-spacing:-.035em;margin:0 0 12px}
+.contact-role{color:var(--gold);letter-spacing:.27em;margin:0}
+.contact-gold-rule{width:48px;height:1px;background:var(--gold);margin:30px 0}
+.contact-quote{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.16rem,1.7vw,1.45rem);font-style:italic;line-height:1.6;color:#ded6c8;max-width:30ch;margin:0}
+.contact-divider{border-top:1px solid var(--line);margin:34px 0 28px}
+.contact-profile h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.8rem,2.5vw,2.5rem);font-weight:400;line-height:1.2;margin:0 0 15px}
+.contact-profile>p:not(.contact-person):not(.eyebrow):not(.contact-quote):not(.contact-direct){color:#c5c0b7;margin:0 0 26px}
+.contact-message{display:flex;gap:16px;align-items:center;justify-content:center;width:100%;min-height:64px;padding:12px 18px;text-transform:uppercase;letter-spacing:.17em;font-size:.78rem;border:1px solid #dacbb3;background:transparent;color:var(--paper);transition:background .2s ease}
+.contact-message:hover,.contact-message:focus-visible{background:rgba(198,170,114,.14)}
+.contact-direct{font-size:.86rem;margin:18px 0 0;color:var(--muted)}
+.contact-direct a{text-decoration:underline;text-underline-offset:4px}
+.contact-meta{max-width:1200px;margin:clamp(36px,6vw,80px) auto 0;padding-top:30px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact-meta .eyebrow{color:var(--gold)}
+.contact-meta p:not(.eyebrow){color:var(--muted);margin:8px 0 0}
+@media(max-width:850px){.contact-identity{grid-template-columns:1fr}.contact-portrait{max-width:680px}.contact-portrait img{aspect-ratio:4/3;object-position:50% center}.contact-profile{max-width:680px}.contact-intro h1{font-size:clamp(2.7rem,9vw,5rem)}}
+@media(max-width:540px){.contact-editorial{padding:54px 24px 68px}.contact-intro h1{font-size:clamp(2.4rem,11vw,3.5rem)}.contact-portrait img{aspect-ratio:4/3}.contact-meta{grid-template-columns:1fr}.contact-person{font-size:2.6rem}}
