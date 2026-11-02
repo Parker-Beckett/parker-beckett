@@ -67,3 +67,14 @@ img[width][height]{height:auto}
 /* Keep released video players visible when JavaScript hides the placeholders. */
 .video-placeholder[hidden],
 .video-shell iframe[hidden] { display: none !important; }
+
+/* APPROVED PARKER BECKETT STORIES 2026-11 */
+.song-details:has(.story-feature){grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,6vw,90px);row-gap:36px}
+.song-details .story-feature{grid-column:1 / -1;max-width:900px;width:100%;margin:0 auto;padding-top:48px;padding-bottom:clamp(32px,5vw,70px);border-top:1px solid var(--line)}
+.story-feature h3{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2rem,3.9vw,3.45rem);font-weight:400;line-height:1.16;letter-spacing:-.025em;margin:14px 0 12px}
+.story-feature .story-subtitle{font-family:Georgia,'Times New Roman',serif;color:var(--gold);font-size:clamp(1.1rem,1.8vw,1.45rem);font-style:italic;margin:0 0 clamp(30px,5vw,54px)}
+.story-feature .story-prose{max-width:76ch}
+.story-feature .story-prose p{font-family:Georgia,'Times New Roman',serif;color:var(--paper);font-size:clamp(1.05rem,1.38vw,1.23rem);line-height:1.82;margin:0 0 1.25em;overflow-wrap:break-word}
+.story-feature .story-prose p:last-child{margin-bottom:0}
+.story-feature .story-prose em{font-style:italic}
+@media(max-width:680px){.song-details:has(.story-feature){grid-template-columns:minmax(0,1fr)}.song-details .story-feature{grid-column:1;padding-top:24px}.story-feature .story-prose p{line-height:1.75}}
