@@ -159,7 +159,7 @@ for slug in ('smile-bigger','youll-have-me'):
     if not src.is_file(): errors.append(f'{slug}: original official lyric PDF missing')
     page=BeautifulSoup((root/'songs'/f'{slug}.html').read_text(encoding='utf-8'),'html.parser')
     if not page.select_one(f'a[href="../{item["lyricSheetPath"]}"]'): errors.append(f'{slug}: official lyric source link missing')
-    if not page.select_one('.detail-card[data-content-status="story-placeholder"]'): errors.append(f'{slug}: unapproved story must remain placeholder')
+    if not page.select_one('.detail-card[data-content-status="approved-story"]'): errors.append(f'{slug}: approved story missing')
 
 # Blue Light exact preservation markers and false missing claims.
 blue_soup=BeautifulSoup((root/'songs/blue-light.html').read_text(encoding='utf-8'),'html.parser')
