@@ -105,3 +105,9 @@ img[width][height]{height:auto}
 .contact-meta p:not(.eyebrow){color:var(--muted);margin:8px 0 0}
 @media(max-width:850px){.contact-identity{grid-template-columns:1fr}.contact-portrait{max-width:680px}.contact-portrait img{aspect-ratio:4/3;object-position:50% center}.contact-profile{max-width:680px}.contact-intro h1{font-size:clamp(2.7rem,9vw,5rem)}}
 @media(max-width:540px){.contact-editorial{padding:54px 24px 68px}.contact-intro h1{font-size:clamp(2.4rem,11vw,3.5rem)}.contact-portrait img{aspect-ratio:4/3}.contact-meta{grid-template-columns:1fr}.contact-person{font-size:2.6rem}}
+
+
+/* Contact page: approved fatherhood portrait, dark blend */
+.contact-portrait{background:#090b0d;border-radius:0}
+.contact-portrait img[src$="corey-contact-fatherhood.jpg"]{display:block;width:100%;height:auto;aspect-ratio:838/996;object-fit:contain;object-position:center center;mask-image:linear-gradient(to bottom,#000 0%,#000 89%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 89%,transparent 100%)}
+@media(max-width:950px){.contact-portrait img[src$="corey-contact-fatherhood.jpg"]{aspect-ratio:838/996;object-fit:contain}}
