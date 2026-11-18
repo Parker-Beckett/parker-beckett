@@ -789,6 +789,45 @@ window.PARKER_BECKETT_CONFIG = {
       "lyricSheetPath": "assets/documents/smile-bigger-official-lyric-sheet.pdf",
       "openGraphImage": "assets/images/smile-bigger.png"
     },
+    "fort-smith": {
+      "title": "Fort Smith",
+      "slug": "fort-smith",
+      "isrc": "QTAF82628728",
+      "upc": "700077644441",
+      "releaseType": "standalone_single",
+      "originalReleaseDate": "2026-11-18",
+      "originalReleaseDateDisplay": "November 18, 2026",
+      "albumName": null,
+      "albumReleaseDate": null,
+      "albumReleaseDateDisplay": null,
+      "preAlbumSingle": false,
+      "debutedOnAlbum": false,
+      "standaloneSingle": true,
+      "artworkPath": "assets/images/fort-smith-cover.png",
+      "songPagePath": "songs/fort-smith.html",
+      "streamingLayout": "verified-only",
+      "hyperfollow": "https://distrokid.com/hyperfollow/parkerbeckett/fort-smith?ref=release",
+      "streaming": {
+        "spotify": "https://open.spotify.com/track/6QxA7nfU9sZRsZGijtooVh",
+        "appleMusic": "",
+        "amazonMusic": "https://music.amazon.com/tracks/B0HS6QYYL7/",
+        "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_kEIzAv8E37aWMa5PRLAfZhw9hWHXV9_nQ",
+        "pandora": "",
+        "deezer": "",
+        "tidal": ""
+      },
+      "youtubeEmbedUrl": "",
+      "videoThumbnail": "",
+      "lyricsStatus": "complete",
+      "storyStatus": "placeholder",
+      "commentaryStatus": "placeholder",
+      "confirmedCredits": {
+        "musicAndLyrics": "Corey Winfield",
+        "label": "Soul Tech Records"
+      },
+      "lyricSheetPath": "",
+      "openGraphImage": "assets/images/fort-smith-cover.png"
+    },
     "youll-have-me": {
       "title": "You'll Have Me",
       "slug": "youll-have-me",

@@ -26,10 +26,11 @@ expected={
 'run-it-straight':('Run It Straight','QT6EF2616658','standalone_single','2026-06-28'),
 'already-in':('Already In','QT6F62657669','standalone_single','2026-07-14'),
 'smile-bigger':('Smile Bigger','QT6HR2604313','standalone_single','2026-08-22'),
-'youll-have-me':("You'll Have Me",'QTA2U2647621','standalone_single','2026-09-29')}
+'youll-have-me':("You'll Have Me",'QTA2U2647621','standalone_single','2026-09-29'),
+'fort-smith':('Fort Smith','QTAF82628728','standalone_single','2026-11-18')}
 album=['aware','looks-fine-to-me','dead-end','merrily','no-return','after-all','movies','bubblegum-tuesday','sorry','on-air','what-have-i-done','blue-light','normal','i-was-the-island','seattle']
 pre={'merrily','looks-fine-to-me','no-return','aware'}
-standalone={'bad-idea-tourettes','run-it-straight','already-in','smile-bigger','youll-have-me'}
+standalone={'bad-idea-tourettes','run-it-straight','already-in','smile-bigger','youll-have-me','fort-smith'}
 internal_docs={'README.md','CHANGELOG.md','AUDIT_REPORT.md','CONTENT_STATUS.md','audit_site.py'}
 platforms={'spotify','appleMusic','amazonMusic','youtubeMusic','pandora','deezer','tidal'}
 
@@ -43,7 +44,7 @@ else:
     except Exception as exc: errors.append(f'site-config.js: invalid JSON object: {exc}'); config={}
 if config.get('version')!='1.4': errors.append('site-config.js: version is not 1.4')
 songs=config.get('songs',{})
-if set(songs)!=set(expected): errors.append(f'site-config.js: expected 20 songs, found {len(songs)}')
+if set(songs)!=set(expected): errors.append(f'site-config.js: expected 21 songs, found {len(songs)}')
 isrcs=[]
 for slug,(title,isrc,rtype,date) in expected.items():
     item=songs.get(slug,{})
@@ -179,8 +180,8 @@ for slug in standalone:
 if len(forecast.select('.release-note'))!=15: errors.append('the-forecast.html: release labels not present for all 15 tracks')
 music=BeautifulSoup((root/'music.html').read_text(encoding='utf-8'),'html.parser')
 chron=[a.get('href') for a in music.select('.chronology-row')]
-expected_chron=['songs/merrily.html','songs/bad-idea-tourettes.html','songs/looks-fine-to-me.html','songs/no-return.html','songs/aware.html','the-forecast.html','songs/run-it-straight.html','songs/already-in.html','songs/smile-bigger.html','songs/youll-have-me.html']
-if chron!=expected_chron: errors.append('music.html: ten-entry chronology mismatch')
+expected_chron=['songs/merrily.html','songs/bad-idea-tourettes.html','songs/looks-fine-to-me.html','songs/no-return.html','songs/aware.html','the-forecast.html','songs/run-it-straight.html','songs/already-in.html','songs/smile-bigger.html','songs/youll-have-me.html','songs/fort-smith.html']
+if chron!=expected_chron: errors.append('music.html: eleven-entry chronology mismatch')
 
 # Videos page uses central config and has no hardcoded external embed.
 video=BeautifulSoup((root/'videos.html').read_text(encoding='utf-8'),'html.parser')
@@ -209,7 +210,7 @@ for js in ['site-config.js','script.js','song-page.js','videos-page.js']:
     if result.returncode: errors.append(f'{js}: JavaScript syntax error ({result.stderr.strip()})')
 
 print(f'Audited {len(html_files)} HTML pages, {len(expected)} recordings, 4 JavaScript files, sitemap, robots, assets, and content states.')
-print('Verified 4 pre-album singles, 11 album-debut tracks, 5 standalone singles, and exactly 15 The Forecast tracks.')
+print('Verified 4 pre-album singles, 11 album-debut tracks, 6 standalone singles, and exactly 15 The Forecast tracks.')
 if warnings:
     print('\nWarnings:')
     for item in sorted(set(warnings)): print(' -',item)
