@@ -819,7 +819,7 @@ window.PARKER_BECKETT_CONFIG = {
       "youtubeEmbedUrl": "",
       "videoThumbnail": "",
       "lyricsStatus": "complete",
-      "storyStatus": "placeholder",
+      "storyStatus": "approved",
       "commentaryStatus": "placeholder",
       "confirmedCredits": {
         "musicAndLyrics": "Corey Winfield",
